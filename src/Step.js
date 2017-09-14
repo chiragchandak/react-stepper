@@ -128,9 +128,9 @@ export default class Step extends Component {
 
     return (
       <div style={ styles.step }>
-        <div style={ circleStyle }>
+        <div style={ circleStyle } onClick={onClick}>
         {active || completed ? (
-          <a href={href} onClick={onClick} style={ styles.index }>{ index + 1 }</a>
+          <a href={href}  style={ styles.index }>{ index + 1 }</a>
         ) : (
           <span style={ styles.index }>{ index + 1 }</span>
         )}
