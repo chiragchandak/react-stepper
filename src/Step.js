@@ -128,7 +128,7 @@ export default class Step extends Component {
 
     return (
       <div style={ styles.step }>
-        <div style={ circleStyle } onClick={onClick}>
+        <div style={ circleStyle } onClick={onClick} style={{cursor:this.props.onClick ? 'pointer' : 'auto'}}>
         {active || completed ? (
           <a href={href}  style={ styles.index }>{ index + 1 }</a>
         ) : (
