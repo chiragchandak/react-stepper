@@ -125,10 +125,10 @@ export default class Step extends Component {
     );
     const leftStyle = Object.assign(styles.leftBar, (active || completed) ? styles.completedBar : {});
     const rightStyle = Object.assign(styles.rightBar, completed ? styles.completedBar : {});
-
+    let cursorStyle = typeof onClick == "function" ? "pointer" : "auto";
     return (
       <div style={ styles.step }>
-        <div style={ circleStyle } onClick={onClick} style={{cursor:this.props.onClick ? 'pointer' : 'auto'}}>
+        <div style={ circleStyle } onClick={onClick} style={{cursor:cursorStyle}}>
         {active || completed ? (
           <a href={href}  style={ styles.index }>{ index + 1 }</a>
         ) : (
